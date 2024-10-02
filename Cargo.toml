@@ -1,0 +1,19 @@
+[package]
+name = "wdotool"
+version = "0.1.0"
+edition = "2021"
+authors = ["gcb"]
+description = "send key presses to wayland"
+license = "AGPL-3.0-or-later"
+publish = false # do not publish versions under 1.0
+
+[dependencies]
+# ideally...:
+#enigo = "^0.2.1"
+# with wayland experimental flag:
+# also, we disable default, with is xdo, wich we cannot use as it
+# is the reason detre of this bs
+
+stderrlog = { version = "0.4", default-features = false }
+log = { version = "0.4", features = ["max_level_debug", "release_max_level_debug"] }
+enigo = { version = "0.2.1", default-features = false, features = ["wayland"] }

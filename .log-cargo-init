@@ -1,0 +1,5 @@
+$ cargo init --bin --name wdotool --offline 2>&1 | tee -a .log-cargo-init
+    Creating binary (application) package
+note: see more `Cargo.toml` keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+
