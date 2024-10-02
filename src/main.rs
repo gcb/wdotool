@@ -9,7 +9,12 @@ use std::env;
 
 
 fn main() {
-	stderrlog::new().module(module_path!()).verbosity(3).quiet(false).init().unwrap();
+	stderrlog::new()
+		.module(module_path!())
+		.module("enigo")
+		.verbosity(3)
+		.quiet(false)
+		.init().unwrap();
 	debug!("init");
 	const VERSION: Option<&str> = option_env!("CARGO_PKG_VERSION");
 
